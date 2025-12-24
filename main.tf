@@ -53,6 +53,3 @@ resource "aws_route_table_association" "devopsshack_association" {
 }
 
 ########################
-# Security Groups
-########################
-resource "aws_securit_
