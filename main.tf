@@ -81,6 +81,8 @@ resource "aws_eks_node_group" "devopsshack" {
     min_size     = 1
   }
 
+  instance_types = ["t2.medium"]
+
   depends_on = [aws_eks_cluster.devopsshack]
 }
 
@@ -136,4 +138,3 @@ resource "aws_iam_role_policy_attachment" "eks_registry_policy" {
   role       = aws_iam_role.eks_node_role.name
   policy_arn = "arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryReadOnly"
 }
-
